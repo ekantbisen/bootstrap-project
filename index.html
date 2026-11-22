@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediCare Hospital | 24/7 Healthcare Services</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #1769d2;
+    --primary-dark: #0e4fa8;
+    --navy: #102b4e;
+    --text: #26364a;
+    --muted: #6c7b8d;
+    --light: #f3f8fd;
+    --border: #e4edf6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR */
+
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    color: var(--primary) !important;
+    font-family: 'Manrope', sans-serif;
+    font-size: 27px;
+    letter-spacing: -.8px;
+}
+
+.nav-link {
+    color: #35465b;
+    font-weight: 600;
+    margin: 0 7px;
+    transition: color .2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+/* HERO SECTION */
+
+.hero-section {
+    padding: 85px 0 95px;
+    background: linear-gradient(120deg, #f4f9ff 0%, #fff 65%);
+    overflow: hidden;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--primary);
+    background: #e8f2ff;
+    border-radius: 30px;
+    padding: 8px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .3px;
+}
+
+.hero-title {
+    color: var(--navy);
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(42px, 5vw, 62px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.hero-title span,
+.section-heading h2 span,
+.appointment-title span {
+    color: var(--primary);
+}
+
+.hero-text {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 540px;
+    margin: 22px 0 28px;
+}
+
+.hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    color: #52657a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero-trust i {
+    color: var(--primary);
+    margin-right: 5px;
+}
+
+.hero-image-wrap {
+    position: relative;
+    padding: 0 0 22px 22px;
+}
+
+.hero-image-wrap::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 75%;
+    height: 75%;
+    background: #d9eaff;
+    border-radius: 24px;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 20px 50px rgba(22, 69, 119, .16);
+}
+
+.hero-note {
+    position: absolute;
+    left: -10px;
+    bottom: 42px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 14px 19px;
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(20, 55, 90, .14);
+}
+
+.note-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    background: #e8f2ff;
+    color: var(--primary);
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.hero-note strong,
+.hero-note small {
+    display: block;
+}
+
+.hero-note strong {
+    color: var(--navy);
+    font-size: 14px;
+}
+
+.hero-note small {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+/* ABOUT SECTION */
+
+.about-strip {
+    background: #f8fbff;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-kicker {
+    color: var(--navy);
+    font: 800 23px 'Manrope', sans-serif;
+}
+
+/* COMMON SECTION */
+
+.section-padding {
+    padding: 85px 0;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font: 800 38px 'Manrope', sans-serif;
+    margin: 15px 0 10px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    margin: 0;
+}
+
+/* SERVICES */
+
+.service-card {
+    padding: 34px 30px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: white;
+    transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+
+.service-card:hover,
+.doctor-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(25, 72, 120, .1);
+    border-color: #c7def8;
+}
+
+.service-icon {
+    width: 62px;
+    height: 62px;
+    display: grid;
+    place-items: center;
+    color: var(--primary);
+    background: #eaf3ff;
+    border-radius: 16px;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    font: 700 22px 'Manrope', sans-serif;
+}
+
+.service-card p {
+    color: var(--muted);
+    margin: 10px 0 22px;
+}
+
+.text-link {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.text-link i {
+    margin-left: 6px;
+}
+
+/* DOCTORS */
+
+.doctors-section {
+    background: var(--light);
+}
+
+.doctor-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: white;
+    transition: .25s;
+}
+
+.doctor-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center 25%;
+    background: #e9f2fa;
+}
+
+.doctor-info {
+    padding: 23px;
+}
+
+.doctor-info h3 {
+    color: var(--navy);
+    font: 700 20px 'Manrope', sans-serif;
+    margin: 0;
+}
+
+.experience {
+    background: #eaf3ff;
+    color: var(--primary);
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.doctor-info p {
+    color: var(--muted);
+    margin: 9px 0 18px;
+}
+
+/* EMERGENCY SECTION */
+
+.emergency-section {
+    padding: 0 0 30px;
+    background: var(--light);
+}
+
+.emergency-box {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 32px 38px;
+    border-radius: 20px;
+    color: white;
+    background: linear-gradient(110deg, #0e5cba, #1d83e8);
+    box-shadow: 0 15px 35px rgba(23, 105, 210, .2);
+}
+
+.emergency-icon {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: rgba(255,255,255,.17);
+    font-size: 28px;
+}
+
+.emergency-copy span {
+    color: #d7eaff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.emergency-copy h2 {
+    font: 800 27px 'Manrope', sans-serif;
+    margin: 3px 0;
+}
+
+.emergency-copy p {
+    color: #e3f0ff;
+}
+
+.emergency-box .btn {
+    color: var(--primary);
+    font-weight: 700;
+    padding: 12px 24px;
+}
+
+/* STATISTICS */
+
+.stats-section {
+    background: white;
+}
+
+.stat-card {
+    height: 100%;
+    padding: 27px 15px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.stat-card i {
+    display: block;
+    color: var(--primary);
+    font-size: 27px;
+    margin-bottom: 9px;
+}
+
+.stat-card h3 {
+    color: var(--navy);
+    font: 800 32px 'Manrope', sans-serif;
+    margin: 0;
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-weight: 600;
+    margin: 5px 0 0;
+}
+
+/* APPOINTMENT */
+
+.appointment-section {
+    background: #f4f9ff;
+}
+
+.appointment-title {
+    color: var(--navy);
+    font: 800 39px 'Manrope', sans-serif;
+    margin: 17px 0;
+}
+
+.appointment-points {
+    margin-top: 25px;
+}
+
+.appointment-points p {
+    color: #52657a;
+    font-weight: 600;
+}
+
+.appointment-points i {
+    color: #20a56b;
+    margin-right: 9px;
+}
+
+.appointment-form {
+    padding: 34px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 15px 45px rgba(23, 72, 120, .08);
+}
+
+.appointment-form h3 {
+    color: var(--navy);
+    font: 800 24px 'Manrope', sans-serif;
+    margin-bottom: 24px;
+}
+
+.form-label {
+    color: #35465b;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-control,
+.form-select {
+    min-height: 47px;
+    border-color: #dce6f0;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 .2rem rgba(13,110,253,.12);
+}
+
+textarea.form-control {
+    min-height: auto;
+}
+
+.form-message {
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 65px 0 0;
+    color: #d9e5f2;
+    background: #102b4e;
+}
+
+.footer-brand {
+    color: white;
+    font: 800 25px 'Manrope', sans-serif;
+}
+
+.footer-description {
+    color: #b8c8d9;
+    line-height: 1.8;
+    max-width: 390px;
+    margin: 18px 0;
+}
+
+.footer-heading {
+    color: white;
+    font: 700 18px 'Manrope', sans-serif;
+    margin: 4px 0 20px;
+}
+
+.footer-links,
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 11px;
+}
+
+.footer-links a,
+.contact-list a {
+    color: #b8c8d9;
+    transition: color .2s;
+}
+
+.footer-links a:hover,
+.contact-list a:hover {
+    color: white;
+}
+
+.contact-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: #b8c8d9;
+}
+
+.contact-list i {
+    color: #66aaff;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    width: 37px;
+    height: 37px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: white;
+    background: rgba(255,255,255,.12);
+}
+
+.social-links a:hover {
+    background: var(--primary);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 48px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,.15);
+    color: #aebfd0;
+    font-size: 13px;
+}
+
+.footer-bottom a {
+    color: white;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 991.98px) {
+
+    .navbar-nav {
+        align-items: stretch !important;
+        padding-top: 12px;
+    }
+
+    .nav-link {
+        margin: 3px 0;
+    }
+
+    .hero-section {
+        padding: 65px 0;
+    }
+
+    .hero-image {
+        height: 370px;
+    }
+
+    .emergency-box {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+
+    .hero-section {
+        padding: 50px 0 65px;
+    }
+
+    .hero-title {
+        font-size: 42px;
+        letter-spacing: -1.3px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero-image {
+        height: 280px;
+    }
+
+    .hero-note {
+        left: 0;
+        bottom: 32px;
+    }
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .section-heading h2,
+    .appointment-title {
+        font-size: 31px;
+    }
+
+    .emergency-box {
+        padding: 25px 22px;
+        gap: 15px;
+    }
+
+    .emergency-copy h2 {
+        font-size: 22px;
+    }
+
+    .emergency-box .btn {
+        width: 100%;
+    }
+
+    .appointment-form {
+        padding: 24px 18px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR START -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="bi bi-heart-pulse-fill me-2"></i>MediCare
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#doctors">Doctors</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-primary rounded-pill px-4" href="#appointment">
+                            Book Appointment
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- NAVBAR END -->
+
+
+    <!-- HERO SECTION START -->
+
+    <header class="hero-section" id="home">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <span class="eyebrow">
+                        <i class="bi bi-plus-circle-fill me-2"></i>
+                        Your health, our priority
+                    </span>
+
+                    <h1 class="hero-title mt-3">
+                        24/7 Healthcare
+                        <span>Services</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Providing quality treatment with experienced doctors
+                        and advanced medical facilities. Your health is our priority.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3">
+
+                        <a href="#appointment" class="btn btn-primary btn-lg rounded-pill px-4">
+                            Book Appointment
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                        <a href="#services" class="btn btn-outline-primary btn-lg rounded-pill px-4">
+                            Explore Services
+                        </a>
+
+                    </div>
+
+                    <div class="hero-trust mt-4">
+
+                        <span>
+                            <i class="bi bi-shield-check"></i>
+                            Trusted care
+                        </span>
+
+                        <span>
+                            <i class="bi bi-clock-history"></i>
+                            Open 24/7
+                        </span>
+
+                        <span>
+                            <i class="bi bi-heart-pulse"></i>
+                            Expert doctors
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="hero-image-wrap">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1100&q=85"
+                            alt="Modern hospital medical team"
+                            class="hero-image">
+
+                        <div class="hero-note">
+
+                            <span class="note-icon">
+                                <i class="bi bi-heart-pulse-fill"></i>
+                            </span>
+
+                            <div>
+                                <strong>Compassionate care</strong>
+                                <small>For every patient, every day</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- HERO SECTION END -->
+
+
+    <!-- ABOUT SECTION START -->
+
+    <section class="about-strip py-4" id="about">
+
+        <div class="container">
+
+            <div class="row align-items-center g-3">
+
+                <div class="col-md-4">
+
+                    <h2 class="section-kicker mb-0">
+                        Care that puts you first.
+                    </h2>
+
+                </div>
+
+                <div class="col-md-8">
+
+                    <p class="mb-0 text-secondary">
+                        At MediCare Hospital, our team combines medical expertise,
+                        modern technology and a personal approach to help you
+                        and your family live healthier lives.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT SECTION END -->
+
+
+    <!-- SERVICES SECTION START -->
+
+    <section class="section-padding" id="services">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+
+                <span class="eyebrow">
+                    What we provide
+                </span>
+
+                <h2>
+                    Our <span>Services</span>
+                </h2>
+
+                <p>
+                    Reliable healthcare services whenever you need them.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4 mt-2">
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card h-100">
+
+                        <div class="service-icon">
+                            <i class="bi bi-hospital"></i>
+                        </div>
+
+                        <h3>Emergency</h3>
+
+                        <p>
+                            24 Hours Emergency Care Available
+                        </p>
+
+                        <a href="#appointment" class="text-link">
+                            View More
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card h-100">
+
+                        <div class="service-icon">
+                            <i class="bi bi-capsule"></i>
+                        </div>
+
+                        <h3>Pharmacy</h3>
+
+                        <p>
+                            Medicines Available All Time
+                        </p>
+
+                        <a href="#appointment" class="text-link">
+                            View More
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card h-100">
+
+                        <div class="service-icon">
+                            <i class="bi bi-truck-front"></i>
+                        </div>
+
+                        <h3>Ambulance</h3>
+
+                        <p>
+                            Fast Ambulance Services
+                        </p>
+
+                        <a href="tel:+919876543210" class="text-link">
+                            View More
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SERVICES SECTION END -->
+
+
+    <!-- DOCTORS SECTION START -->
+
+    <section class="section-padding doctors-section" id="doctors">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+
+                <span class="eyebrow">
+                    Meet our specialists
+                </span>
+
+                <h2>
+                    Our <span>Doctors</span>
+                </h2>
+
+                <p>
+                    Experienced professionals dedicated to your wellbeing.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4 mt-2">
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="doctor-card h-100">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=700&q=85"
+                            alt="Dr. Akshaya"
+                            class="doctor-image">
+
+                        <div class="doctor-info">
+
+                            <div class="d-flex justify-content-between align-items-start gap-2">
+
+                                <h3>Dr. Akshaya</h3>
+
+                                <span class="experience">
+                                    10 Years Exp
+                                </span>
+
+                            </div>
+
+                            <p>Cardiologist</p>
+
+                            <a href="#appointment" class="btn btn-outline-primary rounded-pill w-100">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="doctor-card h-100">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&q=85"
+                            alt="Dr. Manoj"
+                            class="doctor-image">
+
+                        <div class="doctor-info">
+
+                            <div class="d-flex justify-content-between align-items-start gap-2">
+
+                                <h3>Dr. Manoj</h3>
+
+                                <span class="experience">
+                                    8 Years Exp
+                                </span>
+
+                            </div>
+
+                            <p>Dentist</p>
+
+                            <a href="#appointment" class="btn btn-outline-primary rounded-pill w-100">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="doctor-card h-100">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=700&q=85"
+                            alt="Dr. Bharath"
+                            class="doctor-image">
+
+                        <div class="doctor-info">
+
+                            <div class="d-flex justify-content-between align-items-start gap-2">
+
+                                <h3>Dr. Bharath</h3>
+
+                                <span class="experience">
+                                    Senior
+                                </span>
+
+                            </div>
+
+                            <p>Neurologist</p>
+
+                            <a href="#appointment" class="btn btn-outline-primary rounded-pill w-100">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DOCTORS SECTION END -->
+
+
+    <!-- EMERGENCY HOTLINE START -->
+
+    <section class="emergency-section">
+
+        <div class="container">
+
+            <div class="emergency-box">
+
+                <div class="emergency-icon">
+                    <i class="bi bi-telephone-inbound-fill"></i>
+                </div>
+
+                <div class="emergency-copy">
+
+                    <span>Need urgent medical help?</span>
+
+                    <h2>Emergency Hotline</h2>
+
+                    <p class="mb-0">
+                        Available 24×7 for critical care
+                    </p>
+
+                </div>
+
+                <a href="tel:+919876543210"
+                    class="btn btn-light btn-lg rounded-pill ms-lg-auto">
+
+                    <i class="bi bi-telephone-fill me-2"></i>
+                    Call Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EMERGENCY HOTLINE END -->
+
+
+    <!-- STATISTICS SECTION START -->
+
+    <section class="stats-section section-padding">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+
+                <span class="eyebrow">
+                    MediCare in numbers
+                </span>
+
+                <h2>
+                    Hospital <span>Statistics</span>
+                </h2>
+
+            </div>
+
+
+            <div class="row g-3 mt-3">
+
+                <div class="col-6 col-lg-3">
+
+                    <div class="stat-card">
+
+                        <i class="bi bi-person-badge"></i>
+
+                        <h3>120+</h3>
+
+                        <p>Doctors</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-6 col-lg-3">
+
+                    <div class="stat-card">
+
+                        <i class="bi bi-people"></i>
+
+                        <h3>5000+</h3>
+
+                        <p>Patients</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-6 col-lg-3">
+
+                    <div class="stat-card">
+
+                        <i class="bi bi-building"></i>
+
+                        <h3>50+</h3>
+
+                        <p>Departments</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-6 col-lg-3">
+
+                    <div class="stat-card">
+
+                        <i class="bi bi-clock-history"></i>
+
+                        <h3>24×7</h3>
+
+                        <p>Emergency</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- STATISTICS SECTION END -->
+
+
+    <!-- APPOINTMENT SECTION START -->
+
+    <section class="section-padding appointment-section" id="appointment">
+
+        <div class="container">
+
+            <div class="row g-5 align-items-center">
+
+                <div class="col-lg-5">
+
+                    <span class="eyebrow">
+                        We're here for you
+                    </span>
+
+                    <h2 class="appointment-title">
+                        Book an <span>Appointment</span>
+                    </h2>
+
+                    <p class="text-secondary">
+                        Schedule a visit with our experienced medical team.
+                        Fill out the form and our staff will get in touch with you.
+                    </p>
+
+                    <div class="appointment-points">
+
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Easy appointment scheduling
+                        </p>
+
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Experienced medical specialists
+                        </p>
+
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Patient-first care
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <form class="appointment-form" id="appointmentForm">
+
+                        <h3>Book Appointment</h3>
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <label for="patientName" class="form-label">
+                                    Patient Name
+                                </label>
+
+                                <input type="text" class="form-control"
+                                    id="patientName"
+                                    placeholder="Enter your name"
+                                    required>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="patientEmail" class="form-label">
+                                    Email Address
+                                </label>
+
+                                <input type="email" class="form-control"
+                                    id="patientEmail"
+                                    placeholder="Enter your email"
+                                    required>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="patientPhone" class="form-label">
+                                    Phone Number
+                                </label>
+
+                                <input type="tel" class="form-control"
+                                    id="patientPhone"
+                                    placeholder="Enter phone number"
+                                    required>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="department" class="form-label">
+                                    Department
+                                </label>
+
+                                <select class="form-select" id="department" required>
+
+                                    <option value="" selected disabled>
+                                        Select Department
+                                    </option>
+
+                                    <option>Cardiology</option>
+                                    <option>Dentistry</option>
+                                    <option>Neurology</option>
+                                    <option>Emergency</option>
+                                    <option>General Medicine</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="appointmentDate" class="form-label">
+                                    Appointment Date
+                                </label>
+
+                                <input type="date" class="form-control"
+                                    id="appointmentDate"
+                                    required>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="appointmentTime" class="form-label">
+                                    Preferred Time
+                                </label>
+
+                                <input type="time" class="form-control"
+                                    id="appointmentTime"
+                                    required>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <label for="message" class="form-label">
+                                    Message (Optional)
+                                </label>
+
+                                <textarea class="form-control"
+                                    id="message"
+                                    rows="3"
+                                    placeholder="Tell us how we can help"></textarea>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <button type="submit"
+                                    class="btn btn-primary btn-lg rounded-pill w-100">
+
+                                    Book Appointment
+                                    <i class="bi bi-arrow-right ms-2"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div id="formMessage" class="form-message" role="status"></div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- APPOINTMENT SECTION END -->
+
+
+    <!-- FOOTER START -->
+
+    <footer class="footer" id="contact">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-5 col-md-6">
+
+                    <a class="footer-brand" href="#home">
+                        <i class="bi bi-heart-pulse-fill me-2"></i>
+                        MediCare Hospital
+                    </a>
+
+                    <p class="footer-description">
+                        Providing world-class healthcare services with
+                        experienced doctors and advanced facilities.
+                        Your health is our priority.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+
+                    <h3 class="footer-heading">
+                        Quick Links
+                    </h3>
+
+                    <ul class="footer-links">
+
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#appointment">Appointment</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-lg-4 col-md-6">
+
+                    <h3 class="footer-heading">
+                        Contact Info
+                    </h3>
+
+                    <ul class="contact-list">
+
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Hyderabad, Telangana</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-telephone-fill"></i>
+                            <a href="tel:+919876543210">
+                                +91 9876543210
+                            </a>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-envelope-fill"></i>
+                            <a href="mailto:medicare@gmail.com">
+                                medicare@gmail.com
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 MediCare Hospital | All Rights Reserved
+                </span>
+
+                <a href="#home">
+                    Back to top ↑
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- FOOTER END -->
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
